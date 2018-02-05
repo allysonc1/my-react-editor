@@ -32,13 +32,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TitlesBox displayText={this.state.text}
-          changeHandler={this._setNewText}
-        />
-        <ContentsBox displayText={this.state.text}
-          transformText={transformUpper}
-        />
-      </div>
+        <div class="flex-container">
+          <div class="column">Column 1
+            <TitlesBox displayText={this.state.text}
+              changeHandler={this._setNewText}
+            />
+          </div>
+          <div class="column bg-alt">Column 2
+            <ContentsBox displayText={this.state.text}
+              transformText={transformUpper}
+            />
+          </div>
+        </div>
+       </div>
     );
   }
 
